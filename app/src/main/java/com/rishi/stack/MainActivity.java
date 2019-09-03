@@ -52,47 +52,34 @@ public class MainActivity extends AppCompatActivity {
 
                 if (push_count == 11) {
                     b11.setVisibility(View.VISIBLE);
-                    push_count--;
                 } else if (push_count == 10) {
                     b10.setVisibility(View.VISIBLE);
-                    push_count--;
                 } else if (push_count == 9) {
                     b9.setVisibility(View.VISIBLE);
-                    push_count--;
                 } else if (push_count == 8) {
                     b8.setVisibility(View.VISIBLE);
-                    push_count--;
                 } else if (push_count == 7) {
                     b7.setVisibility(View.VISIBLE);
-                    push_count--;
                 } else if (push_count == 6) {
                     b6.setVisibility(View.VISIBLE);
-                    push_count--;
                 } else if (push_count == 5) {
                     b5.setVisibility(View.VISIBLE);
-                    push_count--;
                 } else if (push_count == 4) {
                     b4.setVisibility(View.VISIBLE);
-                    push_count--;
                 } else if (push_count == 3) {
                     b3.setVisibility(View.VISIBLE);
-                    push_count--;
                 } else if (push_count == 2) {
                     b2.setVisibility(View.VISIBLE);
-                    push_count--;
                 } else if (push_count == 1) {
                     b1.setVisibility(View.VISIBLE);
+                }
+                if(push_count >= 1) {
                     push_count--;
-                }else if(push_count == 0){
-                    push_count = 1;
+                } else {
                     Toast.makeText(getApplicationContext(),"Stack Overflow",Toast.LENGTH_SHORT).show();
-
                 }
             }
         });
-
-
-
 
         pop.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,9 +89,9 @@ public class MainActivity extends AppCompatActivity {
                     push_count++;
                 } else {
                     Toast.makeText(getApplicationContext(),"Stack Underflow",Toast.LENGTH_SHORT).show();
-
                 }
                 if(push_count == 1) {
+                   // push_count++;
                     b1.setVisibility(View.INVISIBLE);
                } else if(push_count == 2) {
                     b2.setVisibility(View.INVISIBLE);
@@ -127,7 +114,6 @@ public class MainActivity extends AppCompatActivity {
                 }else if(push_count == 11) {
                     b11.setVisibility(View.INVISIBLE);
                 }
-
             }
         });
     }
